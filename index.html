@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="sweetalert2.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="sweetalert2.min.css">
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <title>SANTA PIZZAS</title>
+</head>
+<body>
+  <header class="header" id="inicio">
+    <img src="img/hamburguesa.svg" alt="" class="hamburguer">
+    <nav class="menu-navigation">
+      <a href="#inicio">Inicio</a>
+      <a href="#productos">Productos</a>
+      <a href="#contacto">Contacto</a>
+      <h2 class="show-carrito" id="verCarrito"><i class='bx bxs-shopping-bag'></i><span id="cantidadCarrito" class="cantidad-carrito"></span> </h2>
+      <div id="toggle">
+        <i class="indicador"></i>
+      </div>
+    </nav>
+    <div class="contenedor head">
+      <h1 class="titulo">SANTA PIZZAS - TIENDA ONLINE</h1>
+      <p class="copy">BUENA PIZZA, SIEMPRE</p>
+    </div>
+  </header>
+  <main>
+    <section class="gallery active" id="productos">
+      <div class="contenedor">
+        <h2 class="subtitulo">Nuestros Productos</h2>
+        <div class="contenedor-galeria">
+          <img src="img/horno.jpg" alt="" class="img-galeria">
+          <img src="img/cocinanos.jpg" alt="" class="img-galeria">
+          <img src="img/fugazzeta.jpg" alt="" class="img-galeria">
+          <img src="img/margherita.jpg" alt="" class="img-galeria">
+          <img src="img/pepperoni.jpg" alt="" class="img-galeria">
+          <img src="img/napoletana1.jpg" alt="" class="img-galeria">
+        </div>
+      </div>
+    </section>
+    <section class="imagen-light">
+      <img src="img/close.svg" alt="" class="close">
+      <img src="" alt="" class="agregar-imagen">
+    </section>
+
+  </main>
+  
+
+  <div id="shopContent" class="shop-content"></div>
+
+  <div id="modal-container" class="modal-container"></div>
+
+<section class="content section" id="contacto">
+  <h1 class="logo">Formulario<span> de Contacto</span></span></h1>
+  <div class="contact-wrapper">
+    <div class="contact-form">
+      <h3>Contactanos</h3>
+      <form action="" id="form">
+        <p>
+          <label for="from_name">Nombre completo</label>
+          <input type="text" name="from_name" id="from_name">
+        </p>
+        <p>
+          <label for="email">Email</label>
+          <input type="text" name="email" id="email">
+        </p>
+        <p>
+          <label for="phone">Número de Télefono</label>
+          <input type="tel" name="phone" id="phone">
+        </p>
+        <p>
+          <label for="consul">Razon de consulta</label>
+          <input type="text" name="" id="consul">
+        </p>
+        <p class="block">
+          <label for="message">Consulta</label>
+          <textarea type="text" name="message" id="message" rows="3"></textarea>
+        </p>
+        <p class="block">
+          <button type="submit" id="button" value="Send Email">
+            Enviar
+          </button>
+        </p>
+
+      </form>
+    </div>
+    <div class="contact-info">
+      <h4>Mas informacion</h4>
+      <ul>
+        <li>Sargento Cabral 2355</li>
+        <li>3786410792</li>
+        <li>Santapizzas@gmail.com</li>
+      </ul>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia aspernatur fugiat in deserunt ducimus inventore. Expedita veniam possimus sequi ipsam.</p>
+      <p>Santa Pizzas ©️</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- HASTA ACA -->
+<footer id="redes">
+  <div class="contenedor footer-content">
+    <div class="contact-us">
+      <h2 class="brand">Santa Pizzas</h2>
+      <p>Somos expertos en la creacion de pizzas</p>
+    </div>
+    <div class="social-media">
+      <a href="./" class="social-media-icon">
+        <i class='bx bxl-facebook-circle' ></i>
+      </a>
+      <a href="./" class="social-media-icon">
+        <i class='bx bxl-instagram-alt' ></i>
+      </a>
+    </div>
+  </div>
+  
+  <div class="line"></div>
+</footer>
+
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>  
+<script src="js/wow.min.js"></script>
+              <script>
+              new WOW().init();
+              </script>
+<script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script type="text/javascript">
+  emailjs.init('0F35akPA0Zynv16OA')
+</script>
+  <script src="js/menu.js"></script>
+  <script src="js/galeria.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/carrito.js"></script>
+
+  
+  
+
+</body>
+</html>
