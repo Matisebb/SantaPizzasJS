@@ -271,7 +271,6 @@ body{
     }
 }
 
-/*  aca arranca lo de youtube*/
 
 .contenedor{
     width: 90%;
@@ -283,7 +282,7 @@ body{
 
 header{
     height: 100vh;
-    background-image: linear-gradient(to right, rgba(248, 54, 0, 0.168) 0%, rgba(249, 213, 35, 0.166) 100%),  url(img/header.jpg);
+    background-image: linear-gradient(to top, rgba(248, 54, 0, 0.168) 0%, rgba(249, 213, 35, 0.166) 100%),  url(img/header.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
