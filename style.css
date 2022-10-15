@@ -214,6 +214,7 @@ body{
     text-transform: uppercase;
     padding: 1em;
     color: #000;
+    cursor: pointer;
 }
 
 .contact-form form button:hover,
@@ -222,6 +223,7 @@ body{
     color: #fff;
     transition: background-color 1s ease-out;
     outline: 0;
+    cursor: pointer;
 }
 
 
