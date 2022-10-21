@@ -4,6 +4,8 @@ const verCarrito = document.getElementById("verCarrito");
 const modalContainer = document.getElementById("modal-container");
 const cantidadCarrito = document.getElementById("cantidadCarrito");
 
+
+
 // Se recopilaran los productos que quedasen guardados en el carrito o será carrito vacio en donde serán pusheados los productos del array productos de products.js 
 // LOCALSTORAGE - GetItem
 

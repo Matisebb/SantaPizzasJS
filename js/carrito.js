@@ -32,6 +32,7 @@ const pintarCarrito = () => {
             <p>Cantidad: ${product.cantidad}</p>
             <span class="add"> + </span>
             <p>Total: ${product.cantidad * product.precio}</p>
+            
         `;
 
         modalContainer.append(carritoContent);
@@ -68,8 +69,10 @@ sumar.addEventListener("click", () => {
 
     const totalComprado = document.createElement("div")
     totalComprado.className = "total-content"
-    totalComprado.innerHTML = `Total a pagar: ${total} $`;
+    totalComprado.innerHTML = `<p>Total a pagar: ${total} $</p>
+    <button class="buttonComprar"> Comprar </button>`;
     modalContainer.append(totalComprado); 
+
     };
 
 verCarrito.addEventListener("click", pintarCarrito);

@@ -564,3 +564,13 @@ footer{
     color: green;
     font-size: 45px;
 }
+
+.buttonComprar{
+    background-color: #ff4a11;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    font-size: 25px;
+    width: 75%;
+    height: 75%;
+}
