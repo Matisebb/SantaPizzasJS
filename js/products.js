@@ -1,4 +1,4 @@
-
+// Array que contiene productos que irán al carrito
 const productos = [
     {
         id: 1,
@@ -30,10 +30,3 @@ const productos = [
     },
 ];
 
-const  guardarLocal = (clave, valor ) => {
-    localStorage.setItem(clave, valor)
-};
-
-for (const producto of productos){
-    guardarLocal(producto.id, JSON.stringify(producto))
-};

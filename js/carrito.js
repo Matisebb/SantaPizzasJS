@@ -28,11 +28,30 @@ const pintarCarrito = () => {
             <img src="${product.img}">
             <h3>${product.nombre}</h3>
             <p>${product.precio} $</p>
+            <span class="reduce"> - </span>
             <p>Cantidad: ${product.cantidad}</p>
+            <span class="add"> + </span>
             <p>Total: ${product.cantidad * product.precio}</p>
         `;
 
         modalContainer.append(carritoContent);
+
+// capturamos ambos "span" con un querySelector y por medio de un add event listener (click), se restarán o sumarán productos
+let reduce = carritoContent.querySelector(".reduce");
+reduce.addEventListener("click", () => {
+    if(product.cantidad !== 1){
+        product.cantidad--;
+    }
+    pintarCarrito();
+    localSave();
+});
+
+let sumar = carritoContent.querySelector(".add");
+sumar.addEventListener("click", () => {
+    product.cantidad++;
+    pintarCarrito();
+    localSave();
+})
 
         let eliminar = document.createElement("span");
 
@@ -44,7 +63,7 @@ const pintarCarrito = () => {
     });
 
 
-
+//Utilizando el metodo reduce sumamos todos los productos seleccionados para obtener el total de la compra
     const total = carrito.reduce((acc, el) => acc + el.precio * el.cantidad, 0);
 
     const totalComprado = document.createElement("div")
@@ -63,11 +82,16 @@ const eliminarProducto = () => {
 
     });
     carritoCounter();
+    localSave();
     pintarCarrito();
 };
 
 const carritoCounter = () => {
     cantidadCarrito.style.display = "block";
-    cantidadCarrito.innerText = carrito.length;
+    const carritoLength = carrito.length;
+    localStorage.setItem("carritoLength", JSON.stringify(carritoLength))
+    cantidadCarrito.innerText = JSON.parse(localStorage.getItem("carritoLength"));
 
 };
+
+carritoCounter();

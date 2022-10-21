@@ -548,3 +548,19 @@ footer{
 
 }
 
+/* modal add y reduce */
+.reduce,
+.add {
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.reduce{
+    color: red;
+    font-size: 65px;
+}
+
+.add{
+    color: green;
+    font-size: 45px;
+}

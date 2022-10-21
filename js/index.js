@@ -4,7 +4,10 @@ const verCarrito = document.getElementById("verCarrito");
 const modalContainer = document.getElementById("modal-container");
 const cantidadCarrito = document.getElementById("cantidadCarrito");
 
-let carrito = [];
+// Se recopilaran los productos que quedasen guardados en el carrito o será carrito vacio en donde serán pusheados los productos del array productos de products.js 
+// LOCALSTORAGE - GetItem
+
+let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 
 productos.forEach((product) => {
@@ -54,10 +57,17 @@ productos.forEach((product) => {
             cantidad: product.cantidad,
         });
     }
-        console.log(carrito);
         carritoCounter();
+        localSave();
     });
 });
+
+// LOCALSTORAGE - SetItem
+const localSave = () => {
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+};
+
+
 
 // FORMULARIO
 const btn = document.getElementById('button');
