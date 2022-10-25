@@ -15,14 +15,14 @@ body{
 }
 
 
-.show-carrito{
+.mostrar-carrito{
     font-size: 25px;
     margin-right: 20px;
     margin-top: 3.5vh;
     cursor: pointer;        
 }
 
-.shop-content{
+.productos-catalogo{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -31,7 +31,7 @@ body{
     margin-right: 80px;
 }
 
-.card{
+.articulo{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     max-width: 300px;
     margin: auto;
@@ -40,24 +40,35 @@ body{
     border-radius: 5px;
 }
 
-.card > img{
-    width: 90%;
-    height: 250px;
+.articulo > img{
+    width: 100%;
+    height: 270px;
     border-radius: 7px;
 }
 
-.price{
-    color: #0a0909;
+.txt{
+    color: black;
     font-size: 22px;
     font-weight: 400;
 }
 
-.card button{
+.h2titulo{
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.articulo button{
     border: none;
     outline: 0;
     padding: 12px;
     color: white;
-    background-color: #000;  
+    background-color: #ff4a11;  
     text-align: center;
     cursor: pointer;
     width: 100%;
@@ -65,17 +76,17 @@ body{
     border-radius: 5px;
 }
 
-.card button:hover{
+.articulo button:hover{
     opacity: 0.7;
 }
 
 
-.modal-container{
+.ventana-catalogo{
     width: 80%;
     margin: 0 10%;
     max-height: 88vh;
-    color: #fff;
-    background-color: #121212;
+    color: black;
+    background-color: whitesmoke;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -85,29 +96,32 @@ body{
     z-index: 9;
     top: 12vh;
     scrollbar-color: none;
+
+    font-weight: 500;
+    font-size: 20px;
 }
 
-.modal-container::-webkit-scrollbar{
+.ventana-catalogo::-webkit-scrollbar{
     display: none;
 }
 
-.modal-header{
+.titulo-ventana{
     display: flex;
     justify-content: space-around;
-    background-color: #0a0909;
+    background-color: #ff4a11;
     color: #fff;
     width: 100%;
 }
 
-.modal-header-title{
+.titulo-ventana-titulo{
     justify-self: start;
 }
 
-.modal-header-button{
+.titulo-ventana-boton{
     cursor: pointer;
 }
 
-.modal-container > .modal-content{
+.ventana-catalogo > .contenido-carrito{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -116,9 +130,9 @@ body{
     margin: 10px;
 }
 
-.modal-container > div > img {
-    height: 120px;
-    width: 120px;
+.ventana-catalogo > div > img {
+    height: 150px;
+    width: 150px;
 }
 
 .total-content{
@@ -142,6 +156,99 @@ body{
     right: 14px;
     display: none;
     text-align: center;
+}
+
+.buttonComprar{
+    background-color: #ff4a11;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    font-size: 25px;
+    width: 75%;
+    height: 75%;
+    color: white;
+}
+
+.reduce,
+.add {
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.reduce{
+    color: red;
+    font-size: 65px;
+}
+
+.add{
+    color: green;
+    font-size: 45px;
+}
+
+.icon{
+    width: 40px;
+    height: 40px;    
+}
+
+
+/* BOTON PIZZA AZAR */
+
+.caja {
+    width: 90%;
+    max-width: 25em;
+}
+.productoAzar {
+    width: 100%;
+    padding: 4em 0;
+    background-color: #ffffff;
+    text-align: center;
+    border-radius: 0.5em;
+}
+.productoAzar .img-caja {
+    height: 11.25em;
+    width: 11.25em;
+    display: block;
+    margin: -8.75em auto 0 auto;
+    background-color: var(--theme-color);
+    box-shadow: 0 0 0 0.3em #ffffff, 0 0 0 0.5em white;
+    border-radius: 50%;
+}
+.img-caja img {
+    width: 100%;
+    border-radius: 50%;
+}
+.caja button {
+    display: block;
+    font-size: 1.2em;
+    width: 90%;
+    margin: 2em auto 0 auto;
+    padding: 1.1em 0;
+    border-radius: 0.3em;
+    border: none;
+    outline: mome;
+    font-weight: 600;
+    color: #000341;
+    cursor: pointer;
+}
+.productoAzar h2 {
+    margin-top: 1.8em;
+    font-weight: 600;
+    color: #000341;
+}
+.productoAzar h3,
+.productoAzar h4 {
+    font-size: 1em;
+    letter-spacing: 0.02em;
+    margin-top: 0.5em;
+    font-weight: 300;
+    color: #90919e;
+}
+.card i {
+    color: var(--theme-color);
+    margin-right: 0.3em;
+}
+.card h4 {
+    margin-top: 0.4em;
 }
 
 
@@ -472,6 +579,8 @@ footer{
     margin-bottom: 60px;
 }
 
+
+
 @media screen and (max-width: 800px){
     .menu-navigation{
         width: 50vw;
@@ -548,29 +657,3 @@ footer{
 
 }
 
-/* modal add y reduce */
-.reduce,
-.add {
-    cursor: pointer;
-    font-weight: 500;
-}
-
-.reduce{
-    color: red;
-    font-size: 65px;
-}
-
-.add{
-    color: green;
-    font-size: 45px;
-}
-
-.buttonComprar{
-    background-color: #ff4a11;
-    border-radius: 5px;
-    outline: none;
-    cursor: pointer;
-    font-size: 25px;
-    width: 75%;
-    height: 75%;
-}

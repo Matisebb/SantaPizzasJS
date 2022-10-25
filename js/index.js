@@ -1,7 +1,9 @@
 
-const shopContent = document.getElementById("shopContent");
+
+
+const productoCatalogo = document.getElementById("productoCatalogo");
 const verCarrito = document.getElementById("verCarrito");
-const modalContainer = document.getElementById("modal-container");
+const ventanaCatalogo = document.getElementById("ventanaCatalogo");
 const cantidadCarrito = document.getElementById("cantidadCarrito");
 
 
@@ -13,15 +15,16 @@ let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 
 productos.forEach((product) => {
-    let content = document.createElement("div");
-    content.className = "card";
-    content.innerHTML = `
+    let menu = document.createElement("div");
+    menu.className = "articulo";
+    menu.innerHTML = `
         <img src="${product.img}">
         <h3>${product.nombre}</h3>
-        <p class="price">${product.precio} $</p>
+        <p class="txt">${product.precio} $</p>
+        <p class="txt">${product.descripcion}</p>
     `;
 
-    shopContent.append(content);    
+    productoCatalogo.append(menu);    
 
     let comprar = document.createElement("button");
     comprar.innerText = "Comprar";
@@ -29,7 +32,7 @@ productos.forEach((product) => {
 
 
 
-    content.append(comprar);
+    menu.append(comprar);
     
     comprar.addEventListener("click", () => {
         Toastify({
@@ -96,3 +99,4 @@ emailjs.sendForm(serviceID, templateID, this)
     alert(JSON.stringify(err));
     });
 });
+

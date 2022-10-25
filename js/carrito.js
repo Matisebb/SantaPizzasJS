@@ -1,30 +1,30 @@
 
-const pintarCarrito = () => {
+const carritoOn = () => {
 
-    modalContainer.innerHTML = "";
-    modalContainer.style.display = "flex"
-    const modalHeader = document.createElement("div");
-    modalHeader.className = "modal-header"
-    modalHeader.innerHTML = `
-        <h1 class="modal-header-title"> Sus productos</h1>
+    ventanaCatalogo.innerHTML = "";
+    ventanaCatalogo.style.display = "flex"
+    const tituloVentana = document.createElement("div");
+    tituloVentana.className = "titulo-ventana"
+    tituloVentana.innerHTML = `
+        <h1 class="titulo-ventana-titulo"> Sus productos</h1>
     `
-    modalContainer.append(modalHeader);
+    ventanaCatalogo.append(tituloVentana);
 
-    const modalbutton = document.createElement("h2");
-    modalbutton.innerText = "x";
-    modalbutton.className = "modal-header-button";
+    const botonVentana = document.createElement("h2");
+    botonVentana.innerText = "x";
+    botonVentana.className = "titulo-ventana-boton";
 
-    modalbutton.addEventListener("click", () => {
-        modalContainer.style.display = "none";
+    botonVentana.addEventListener("click", () => {
+        ventanaCatalogo.style.display = "none";
     })
 
-    modalHeader.append(modalbutton);
+    tituloVentana.append(botonVentana);
 
 
     carrito.forEach((product)=> {
-        let carritoContent = document.createElement("div");
-        carritoContent.className = "modal-content";
-        carritoContent.innerHTML = `
+        let contenidoCarrito = document.createElement("div");
+        contenidoCarrito.className = "contenido-carrito";
+        contenidoCarrito.innerHTML = `
             <img src="${product.img}">
             <h3>${product.nombre}</h3>
             <p>${product.precio} $</p>
@@ -35,22 +35,22 @@ const pintarCarrito = () => {
             
         `;
 
-        modalContainer.append(carritoContent);
+        ventanaCatalogo.append(contenidoCarrito);
 
 // capturamos ambos "span" con un querySelector y por medio de un add event listener (click), se restarán o sumarán productos
-let reduce = carritoContent.querySelector(".reduce");
+let reduce = contenidoCarrito.querySelector(".reduce");
 reduce.addEventListener("click", () => {
     if(product.cantidad !== 1){
         product.cantidad--;
     }
-    pintarCarrito();
+    carritoOn();
     localSave();
 });
 
-let sumar = carritoContent.querySelector(".add");
+let sumar = contenidoCarrito.querySelector(".add");
 sumar.addEventListener("click", () => {
     product.cantidad++;
-    pintarCarrito();
+    carritoOn();
     localSave();
 })
 
@@ -58,7 +58,7 @@ sumar.addEventListener("click", () => {
 
         eliminar.innerText = "❌";
         eliminar.className = "delete-product";
-        carritoContent.append(eliminar);
+        contenidoCarrito.append(eliminar);
 
         eliminar.addEventListener("click", eliminarProducto);
     });
@@ -71,11 +71,11 @@ sumar.addEventListener("click", () => {
     totalComprado.className = "total-content"
     totalComprado.innerHTML = `<p>Total a pagar: ${total} $</p>
     <button class="buttonComprar"> Comprar </button>`;
-    modalContainer.append(totalComprado); 
+    ventanaCatalogo.append(totalComprado); 
 
     };
 
-verCarrito.addEventListener("click", pintarCarrito);
+verCarrito.addEventListener("click", carritoOn);
 
 const eliminarProducto = () => {
     const foundId = carrito.find((element) => element.id);
@@ -86,7 +86,7 @@ const eliminarProducto = () => {
     });
     carritoCounter();
     localSave();
-    pintarCarrito();
+    carritoOn();
 };
 
 const carritoCounter = () => {
