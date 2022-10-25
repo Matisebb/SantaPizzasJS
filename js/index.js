@@ -1,6 +1,5 @@
 
 
-
 const productoCatalogo = document.getElementById("productoCatalogo");
 const verCarrito = document.getElementById("verCarrito");
 const ventanaCatalogo = document.getElementById("ventanaCatalogo");
@@ -19,7 +18,7 @@ productos.forEach((product) => {
     menu.className = "articulo";
     menu.innerHTML = `
         <img src="${product.img}">
-        <h3>${product.nombre}</h3>
+        <h3 class ="nombre">${product.nombre}</h3>
         <p class="txt">${product.precio} $</p>
         <p class="txt">${product.descripcion}</p>
     `;
@@ -100,3 +99,23 @@ emailjs.sendForm(serviceID, templateID, this)
     });
 });
 
+
+// CONTADOR LOCAL
+
+let tiempo = document.getElementById("tiempo");
+let deadline = new Date("Dec, 2022, 12:37:25").getTime(); 
+let x = setInterval(function() { 
+let now = new Date().getTime(); 
+let time = deadline - now; 
+let days = Math.floor(time / (1000 * 60 * 60 * 24)); 
+var hours = Math.floor((time%(1000 * 60 * 60 * 24))/(1000 * 60 * 60)); 
+var minutes = Math.floor((time % (1000 * 60 * 60)) / (1000 * 60)); 
+var seconds = Math.floor((time % (1000 * 60)) / 1000); 
+tiempo.innerHTML =  days + "d "  
++ hours + "h " + minutes + "m " + seconds + "s ";
+
+    if (time < 0) { 
+        clearInterval(x); 
+        demo.innerHTML = "EL GRAN DIA DE LA INAUGURACION ES HOY!! SGTO CABRAL 2355"; 
+    } 
+}, 1000);

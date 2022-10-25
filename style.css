@@ -38,12 +38,23 @@ body{
     text-align: center;
     font-family: arial;
     border-radius: 5px;
+    background-color: rgba(193, 193, 193, 0.5);
 }
 
 .articulo > img{
     width: 100%;
     height: 270px;
     border-radius: 7px;
+}
+
+.nombre{
+    text-decoration: underline 0.15em rgba(0, 0, 0, 0);
+    transition: text-decoration-color 300ms;
+}
+
+.nombre:hover{
+    text-decoration-color: rgba(0, 0, 0, 1);
+
 }
 
 .txt{
@@ -191,67 +202,6 @@ body{
 }
 
 
-/* BOTON PIZZA AZAR */
-
-.caja {
-    width: 90%;
-    max-width: 25em;
-}
-.productoAzar {
-    width: 100%;
-    padding: 4em 0;
-    background-color: #ffffff;
-    text-align: center;
-    border-radius: 0.5em;
-}
-.productoAzar .img-caja {
-    height: 11.25em;
-    width: 11.25em;
-    display: block;
-    margin: -8.75em auto 0 auto;
-    background-color: var(--theme-color);
-    box-shadow: 0 0 0 0.3em #ffffff, 0 0 0 0.5em white;
-    border-radius: 50%;
-}
-.img-caja img {
-    width: 100%;
-    border-radius: 50%;
-}
-.caja button {
-    display: block;
-    font-size: 1.2em;
-    width: 90%;
-    margin: 2em auto 0 auto;
-    padding: 1.1em 0;
-    border-radius: 0.3em;
-    border: none;
-    outline: mome;
-    font-weight: 600;
-    color: #000341;
-    cursor: pointer;
-}
-.productoAzar h2 {
-    margin-top: 1.8em;
-    font-weight: 600;
-    color: #000341;
-}
-.productoAzar h3,
-.productoAzar h4 {
-    font-size: 1em;
-    letter-spacing: 0.02em;
-    margin-top: 0.5em;
-    font-weight: 300;
-    color: #90919e;
-}
-.card i {
-    color: var(--theme-color);
-    margin-right: 0.3em;
-}
-.card h4 {
-    margin-top: 0.4em;
-}
-
-
 /* FORMULARIO */
 
 .section{
@@ -303,7 +253,6 @@ body{
     margin: 0;
     padding: 1em;
 }
-
 
 
 .contact-form form button,
@@ -449,12 +398,24 @@ header{
 .titulo{
     font-size: 60px;
     margin-bottom: 15px;
-    font-weight: 500;
+    font-weight: 600;
+    background-color: rgba(193, 193, 193, 0.3);
+    border-radius: 5px;
+}
+
+.white{
+    font-size: 25px;
+    font-weight: 600;
+    color: whitesmoke;
+    background-color: rgba(0, 0, 0, 0.325);
+    border-radius: 5px;
 }
 
 .copy{
-    font-weight: 400;
+    font-weight: 500;
     font-size: 40px;
+    background-color: rgba(193, 193, 193, 0.4);
+    border-radius: 5px;
 }
 
 .gallery{
@@ -475,6 +436,8 @@ header{
     box-shadow: 0 0 6px rgba(0, 0, 0, .5);
     cursor: pointer;
 }
+
+
 
 .imagen-light{
     position: fixed;
