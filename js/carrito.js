@@ -72,6 +72,8 @@ sumar.addEventListener("click", () => {
     totalComprado.innerHTML = `<p>Total a pagar: ${total} $</p>
     <button class="buttonComprar"> Comprar </button>`;
     ventanaCatalogo.append(totalComprado); 
+    const botonComprar = document.querySelector(".buttonComprar")
+    botonComprar.addEventListener('click', comprarButtonClicked);
 
     };
 
@@ -98,3 +100,15 @@ const carritoCounter = () => {
 };
 
 carritoCounter();
+
+function comprarButtonClicked() {
+    Swal.fire({
+        icon: 'success',
+        title: 'Gracias por su compra! ',
+        text: 'Ha sido realizada con exito. En breve le enviamos su pedido!',
+        position: 'center',
+        timer: 6000,
+        showConfirmButton: true,
+    
+    })
+};

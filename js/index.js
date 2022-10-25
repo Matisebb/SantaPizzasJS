@@ -1,5 +1,18 @@
+// MENU DESPLEGABLE FUNCIONAL
+const hamburguer = document.querySelector(".hamburguer");
+const menu = document.querySelector(".menu-navigation");
 
+hamburguer.addEventListener("click", () =>{
+    menu.classList.toggle("spread")
+});
 
+window.addEventListener("click", e =>{
+    if(menu.classList.contains("spread") && e.target != menu && e.target != hamburguer ){
+        menu.classList.toggle("spread");
+    }
+});
+
+//CARRITO COMPRAS - VISUAL
 const productoCatalogo = document.getElementById("productoCatalogo");
 const verCarrito = document.getElementById("verCarrito");
 const ventanaCatalogo = document.getElementById("ventanaCatalogo");
