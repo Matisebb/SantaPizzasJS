@@ -542,7 +542,6 @@ footer{
 }
 
 
-
 @media screen and (max-width: 800px){
     .menu-navigation{
         width: 50vw;
@@ -579,6 +578,112 @@ footer{
         width: 80%;
         margin-bottom: 40px;
     }
+
+/* MODAL */
+
+.ventana-catalogo{
+    width: 85%;
+    margin: 0 10%;
+    max-height: 90vh;
+    color: black;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: fixed;
+    overflow: auto;
+    z-index: 9;
+    top: 12vh;
+    scrollbar-color: none;
+
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.ventana-catalogo::-webkit-scrollbar{
+    display: none;
+}
+
+.titulo-ventana{
+    display: flex;
+    justify-content: space-around;
+    background-color: #ff4a11;
+    color: #fff;
+    width: 100%;
+}
+
+.titulo-ventana-titulo{
+    justify-self: start;
+}
+
+.titulo-ventana-boton{
+    cursor: pointer;
+}
+
+.ventana-catalogo > .contenido-carrito{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    margin: 10px;
+}
+
+.ventana-catalogo > div > img {
+    height: 120px;
+    width: 120px;
+}
+
+.total-content{
+    font-size: 20px;
+    padding: 15px;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.delete-product {
+    cursor: pointer;
+}
+
+.cantidad-carrito {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    font-size: 10px;
+    padding: 4px;
+    top: 37px;
+    right: 14px;
+    display: none;
+    text-align: center;
+}
+
+.buttonComprar{
+    background-color: #ff4a11;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    font-size: 25px;
+    width: 75%;
+    height: 75%;
+    color: white;
+}
+
+.reduce,
+.add {
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.reduce{
+    color: red;
+    font-size: 45px;
+}
+
+.add{
+    color: green;
+    font-size: 35px;
+}
 }
 
 @media screen and (max-width: 500px){
@@ -616,6 +721,133 @@ footer{
     .contact-us{
         width: 90%;
     }
+    .ventana-catalogo{
+        width: 100%;
+        margin: 0 10%;
+        max-height: 88vh;
+        color: black;
+        background-color: whitesmoke;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+        position: fixed;
+        overflow: auto;
+        z-index: 9;
+        top: 12vh;
+        scrollbar-color: none;
+    
+        font-weight: 500;
+        font-size: 20px;
+    }
 
+    /* MODAL */
+
+.ventana-catalogo{
+    width: 85%;
+    margin: 0 10%;
+    max-height: 90vh;
+    color: black;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: fixed;
+    overflow: auto;
+    z-index: 9;
+    top: 12vh;
+    scrollbar-color: none;
+
+    font-weight: 500;
+    font-size: 15px;
 }
+
+.ventana-catalogo::-webkit-scrollbar{
+    display: none;
+}
+
+.titulo-ventana{
+    display: flex;
+    justify-content: space-around;
+    background-color: #ff4a11;
+    color: #fff;
+    width: 100%;
+}
+
+.titulo-ventana-titulo{
+    justify-self: start;
+}
+
+.titulo-ventana-boton{
+    cursor: pointer;
+}
+
+.ventana-catalogo > .contenido-carrito{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 60%;
+    margin: 10px;
+}
+
+.ventana-catalogo > div > img {
+    height: 60px;
+    width: 60px;
+}
+
+
+
+.total-content{
+    font-size: 15px;
+    padding: 10px;
+    text-align: center;
+    padding-top: 12px;
+}
+
+.delete-product {
+    cursor: pointer;
+}
+
+.cantidad-carrito {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    font-size: 15px;
+    padding: 4px;
+    top: 37px;
+    right: 14px;
+    display: none;
+    text-align: center;
+}
+
+.buttonComprar{
+    background-color: #ff4a11;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    font-size: 25px;
+    width: 75%;
+    height: 75%;
+    color: white;
+}
+
+.reduce,
+.add {
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.reduce{
+    color: red;
+    font-size: 30px;
+}
+
+.add{
+    color: green;
+    font-size: 25px;
+}
+}
+
 
