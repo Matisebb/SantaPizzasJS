@@ -178,6 +178,7 @@ body{
     width: 75%;
     height: 75%;
     color: white;
+    border: none;
 }
 
 .reduce,
@@ -405,10 +406,9 @@ header{
 }
 
 .white{
-    font-size: 25px;
+    font-size: 30px;
     font-weight: 600;
-    color: whitesmoke;
-    background-color: rgba(0, 0, 0, 0.325);
+    color: black;
     border-radius: 5px;
 }
 
@@ -850,4 +850,58 @@ footer{
 }
 }
 
+/* banner local inauguracion */
 
+.img{
+    width: 70%;
+    height: 40%;
+    box-shadow: 0 0 90px rgba(0, 0, 0, .8);
+}
+
+h3 > span {
+    color: #ff4a11;
+}
+
+.bg{
+    background-color: rgba(193, 193, 193, 0.4)
+}
+
+.inauguracion {
+    font-weight: 700;
+    font-size: 50px;
+}
+
+
+/* BOTON REDIRECCION */
+.btnwp{
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: rgb(255, 74, 17);  
+    text-align: center;
+    cursor: pointer;
+    width: 10%;
+    font-size: 18px;
+    border-radius: 5px;
+    height: 50px;
+    text-align: center;
+}
+
+.btnwp:hover{
+    background-color: rgba(255, 74, 17, 0.9);
+}
+/* BOTON FLOTANTE WP */
+.wp{
+    width: 5rem;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    filter: drop-shadow(.8rem .8rem .8rem rgba(0, 0, 0, 0.406));
+    transition: all .2s ease;
+}
+
+.wp:hover{
+    width: 6rem;
+    cursor: pointer;
+}
