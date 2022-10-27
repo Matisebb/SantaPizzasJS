@@ -31,6 +31,7 @@ const carritoOn = () => {
             <span class="reduce"> - </span>
             <p>Cantidad: ${product.cantidad}</p>
             <span class="add"> + </span>
+            <span class="delete-product" > ❌ </span>
             <p>Total: ${product.cantidad * product.precio}</p>
             
         `;
@@ -52,16 +53,13 @@ sumar.addEventListener("click", () => {
     product.cantidad++;
     carritoOn();
     localSave();
+});
+
+let eliminar = contenidoCarrito.querySelector(".delete-product");
+eliminar.addEventListener("click", () => {
+    eliminarProducto(product.id);
 })
-
-        let eliminar = document.createElement("span");
-
-        eliminar.innerText = "❌";
-        eliminar.className = "delete-product";
-        contenidoCarrito.append(eliminar);
-
-        eliminar.addEventListener("click", eliminarProducto);
-    });
+});
 
 
 //Utilizando el metodo reduce sumamos todos los productos seleccionados para obtener el total de la compra
@@ -79,8 +77,8 @@ sumar.addEventListener("click", () => {
 
 verCarrito.addEventListener("click", carritoOn);
 
-const eliminarProducto = () => {
-    const foundId = carrito.find((element) => element.id);
+const eliminarProducto = (id) => {
+    const foundId = carrito.find((element) => element.id === id);
 
     carrito = carrito.filter((carritoId) => {
         return carritoId !== foundId;
@@ -107,8 +105,8 @@ function comprarButtonClicked() {
         title: 'Gracias por su compra! ',
         text: 'Ha sido realizada con exito. En breve le enviamos su pedido!',
         position: 'center',
-        timer: 6000,
+        timer: 5000,
         showConfirmButton: true,
     
-    })
+    });
 };
