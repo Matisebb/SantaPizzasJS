@@ -16,7 +16,10 @@
   />
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
   <title>SANTA PIZZAS</title>
 </head>
 <body>
@@ -61,17 +64,18 @@
   <div id="productoCatalogo" class="productos-catalogo"></div>
   <div id="ventanaCatalogo" class="ventana-catalogo"></div>
 
-
-  <div>
-    <div class="bg"> 
+<div class="container">
+  <div class="row">
+    <div class="bg col-sm-12 col-md-12 col-lg-12"> 
       <h3 class="mx-5 mt-5 mb-3 text-center inauguracion">
         Gran INAUGURACION - <span>SANTA PIZZAS</span>
       </h3> 
       <p id="tiempo" class="white text-center"></p>
-      <img src="img/menu-otoño.png" class="img-fluid img rounded mx-auto d-block" alt="...">
-      <button type="button" onclick="invitacion()" class="btnwp rounder mx-auto d-block my-3" target="_blank">Enviar invitación</button>
+      <img src="img/menu-otoño.png" class="img-fluid img rounded mx-auto d-block animate__bounce" alt="...">
+      <button type="button" onclick="invitacion()" class="btnwp rounder mx-auto d-block my-3 btn-block" target="_blank">Enviar invitación</button>
     </div>
   </div>
+</div>  
 
 <section class="content section" id="contacto">
   <h1 class="logo">Formulario<span> de Contacto</span></span></h1>
