@@ -13,10 +13,20 @@ window.addEventListener("click", e =>{
 });
 
 //CARRITO COMPRAS - VISUAL
+
+//la propiedad de getElementById capturará el id "productoCatalogo" del html que será el elemento div que contendrá a la variable "menu"
 const productoCatalogo = document.getElementById("productoCatalogo");
+
+//se captura por medio del id del html, la opcion de visualizar el "carrito" fisico
 const verCarrito = document.getElementById("verCarrito");
+
+// por medio de id se captura el div que permitirá insertar las propiedades asignadas en ventanaCatalogo
 const ventanaCatalogo = document.getElementById("ventanaCatalogo");
+
+
 const cantidadCarrito = document.getElementById("cantidadCarrito");
+
+
 
 
 
@@ -25,7 +35,8 @@ const cantidadCarrito = document.getElementById("cantidadCarrito");
 
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
-
+// forEach que recorre el array de products.js
+// let menu por medio de un document.createElement contendrá elementos html del array de productos en products.js
 productos.forEach((product) => {
     let menu = document.createElement("div");
     menu.className = "articulo";
@@ -35,17 +46,21 @@ productos.forEach((product) => {
         <p class="txt">${product.precio} $</p>
         <p class="txt">${product.descripcion}</p>
     `;
-
+    
+// productoCatalogo tendrá insertado lo creado de la variable menu en el div del html
     productoCatalogo.append(menu);    
 
+// se crea una variable y en ella se crea el boton (por medio de innertext que interpretaría el elemento html button)
     let comprar = document.createElement("button");
     comprar.innerText = "Comprar";
     comprar.className = "comprar";
 
 
-
+// utilizamos nuevamente append para agregar al div menu de la variable menu
     menu.append(comprar);
-    
+
+//a traves de addEventListener (click), en carrito se irán agregando de product id, nombre, precio, img y cantidad
+//también se emergerá un mensaje de confirmacion de los productos agregador con exito al carrito  
     comprar.addEventListener("click", () => {
         Toastify({
             text: "Su producto ha sido agregado al carrito con exito!",

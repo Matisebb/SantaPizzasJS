@@ -1,4 +1,4 @@
-// Array que contiene productos que irán al carrito
+// Array que contiene productos que serán recorridos por medio de un forEach
 const productos = [
     {
         id: 1,
@@ -33,4 +33,5 @@ const productos = [
         descripcion: "Queso Mozzarella, cebolla, oregano y aceite de oliva",
     },
 ];
+
 

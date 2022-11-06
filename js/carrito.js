@@ -1,4 +1,4 @@
-
+// carritoOn por medio de una funcion contendrá un modal que se mostrará con los productos agregados
 const carritoOn = () => {
 
     ventanaCatalogo.innerHTML = "";
@@ -8,19 +8,22 @@ const carritoOn = () => {
     tituloVentana.innerHTML = `
         <h1 class="titulo-ventana-titulo"> Sus productos</h1>
     `
+//ventanaCatalogo capturará tituloVentana y será insertado en el mismo (visualmente en el div del html)
     ventanaCatalogo.append(tituloVentana);
+
 
     const botonVentana = document.createElement("h2");
     botonVentana.innerText = "x";
     botonVentana.className = "titulo-ventana-boton";
-
+//al efectuar el evento "click" en la "X" y con el uso de css con style.display, ésta estará oculta
     botonVentana.addEventListener("click", () => {
         ventanaCatalogo.style.display = "none";
     })
 
+//tituloVentana contendrá botonVentana que es la "X" en el modal de productos 
     tituloVentana.append(botonVentana);
 
-
+// se llama a la variable carrito y por medio de un forEach se recorre product de cada uno de los productos seleccionados
     carrito.forEach((product)=> {
         let contenidoCarrito = document.createElement("div");
         contenidoCarrito.className = "contenido-carrito";
@@ -35,7 +38,7 @@ const carritoOn = () => {
             <p>Total: ${product.cantidad * product.precio}</p>
             
         `;
-
+// ventanaCatalogo agregará el contenido de "contenidoCarrito" y lo mostrará en el modal creado anteriormente
         ventanaCatalogo.append(contenidoCarrito);
 
 // capturamos ambos "span" con un querySelector y por medio de un add event listener (click), se restarán o sumarán productos
